@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Protocol | Gnosis Engine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="nexus-panel p-6 sm:p-10 rounded-xl w-full max-w-lg mx-4">
+        <h1 class="text-3xl font-bold mb-4 text-center tracking-wider" style="text-shadow: 0 0 10px #00e0ff;">
+            &lt;NEXUS_PROTOCOL v4.0 /&gt;
+        </h1>
+        <p class="text-sm mb-6 text-center text-gray-400">
+            Now featuring conversation history and **Mode Selection**!
+        </p>
+        
+
+        <div class="space-y-4">
+            <input type="text" id="queryInput" placeholder="Enter query for data retrieval or script generation..." 
+                   class="nexus-input w-full p-3 rounded-lg text-sm transition-all">
+            
+            <div class="text-xs text-center text-red-400 font-semibold pt-1">
+                Content Protocol Active: Violations will be blocked (ERROR_NONSENSE).
+            </div>
+
+            <button id="queryButton" 
+                    class="nexus-button w-full p-3 rounded-lg font-semibold uppercase tracking-widest flex items-center justify-center">
+                Execute Query
+            </button>
+        </div>
+
+     <h2 class="text-xl font-mono mb-3 uppercase tracking-wider text-lime-300 flex justify-between items-center">
+    <span>[RESPONSE_LOG]</span>
+    <div class="flex space-x-2">
+        <button id="spinButton"
+                class="nexus-button text-sm px-3 py-1 rounded-lg font-semibold flex items-center justify-center transition-all bg-purple-700 hover:bg-purple-600 border-purple-500"
+                style="background: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3); border: 2px solid white; color: white;">
+            Spin! 🥳
+        </button>
+        <button id="researchButton" disabled
+                class="nexus-button text-sm px-3 py-1 rounded-lg font-semibold flex items-center justify-center transition-all disabled:opacity-30 disabled:hover:transform-none disabled:cursor-not-allowed bg-blue-700 hover:bg-blue-600 border-blue-500">
+            Research 🌐
+        </button>
+        <button id="modeButton" 
+                class="nexus-button text-sm px-3 py-1 rounded-lg font-semibold flex items-center justify-center transition-all">
+            Mode: Coding Mode
+        </button>
+    </div>
+</h2>
+            <div id="output" class="text-sm p-3 rounded-md bg-gray-900/60 transition-all border border-gray-700/50">
+                <p>--- System Ready. Awaiting Command Input ---</p>
+            </div>
+            
+            <div id="loadingIndicator" class="hidden mt-4 flex justify-center items-center space-x-2">
+                <div class="nexus-loader"></div>
+                <span class="text-sm text-cyan-400">Processing Data Stream...</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
