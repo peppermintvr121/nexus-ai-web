@@ -1,0 +1,114 @@
+/* Custom Font and Background */
+body {
+    font-family: 'Inter', monospace;
+    background-color: #0d1117; /* Deep Space Black */
+    color: #00e0ff; /* Neon Cyan */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Futuristic Container Styles */
+.nexus-panel {
+    background-color: rgba(18, 24, 32, 0.8); /* Dark, transparent base */
+    border: 1px solid #005663;
+    box-shadow: 0 0 20px rgba(0, 224, 255, 0.4); /* Soft neon glow */
+    backdrop-filter: blur(5px);
+}
+
+/* Input and Button Styles */
+.nexus-input, .nexus-button {
+    border: 1px solid #00aaff;
+    background-color: #1f2733; /* Darker input field */
+    color: #ccf2ff;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px rgba(0, 170, 255, 0.2);
+}
+
+.nexus-input:focus {
+    outline: none;
+    border-color: #00e0ff;
+    box-shadow: 0 0 10px rgba(0, 224, 255, 0.7);
+}
+
+.nexus-button:hover:not(:disabled) {
+    background-color: #00aaff;
+    color: #1f2733;
+    box-shadow: 0 0 15px rgba(0, 170, 255, 0.9);
+    transform: translateY(-2px);
+}
+
+.nexus-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Loader Animation */
+.nexus-loader {
+    border: 4px solid rgba(0, 224, 255, 0.2);
+    border-top: 4px solid #00e0ff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Output Box */
+#output {
+    border-left: 3px solid #00aaff;
+    padding-left: 1rem;
+    min-height: 150px;
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+.error-message {
+    color: #ff4444; /* Alert Red */
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255, 68, 68, 0.8);
+}
+
+.sources-title {
+    color: #00ffaa; /* Accent Green */
+    margin-top: 1rem;
+    text-shadow: 0 0 3px rgba(0, 255, 170, 0.5);
+}
+.source-link {
+    color: #79aeff; /* Lighter Blue for links */
+    text-decoration: none;
+}
+.source-link:hover {
+    text-decoration: underline;
+}
+
+/* Ensure strong tags are clearly bolded */
+#output strong {
+    font-weight: 700;
+    color: #ccf2ff;
+}
+/* Ensure emphasis tags are correctly styled */
+#output em {
+    font-style: italic;
+    color: #aaf0ff; /* Slightly lighter cyan for distinction */
+}
+
+/* Style for code blocks */
+#output pre {
+    background-color: #1f2733; /* Darker than background */
+    padding: 1rem;
+    margin: 0.75rem 0;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    font-family: monospace;
+    border: 1px solid #00aaff50;
+}
+#output code {
+    color: #aaffaa; /* Light green for code text */
+    white-space: pre-wrap; /* Ensure text wraps */
+}
